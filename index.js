@@ -7,9 +7,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
-})
+  res.send('Hello World!');
+});
 
 app.listen(3000, () => {
-    console.log('Started on port 3000');
+  // eslint-disable-next-line
+  console.log("Started on port 3000");
 });
