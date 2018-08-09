@@ -1,16 +1,9 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+const server = require('./src/server');
 
-const app = express();
+server.listen(3000);
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-
-app.listen(3000, () => {
+process.on('uncaughtException', err => {
   // eslint-disable-next-line
-  console.log("Started on port 3000");
+  console.error(err, "Uncaught Exception thrown");
+  process.exit(1);
 });
