@@ -1,6 +1,10 @@
+require('dotenv').config();
+require('./src/db.config');
 const server = require('./src/server');
 
-server.listen(3000);
+const { PORT } = process.env;
+
+server.listen(PORT || 3000);
 
 process.on('uncaughtException', err => {
   // eslint-disable-next-line
