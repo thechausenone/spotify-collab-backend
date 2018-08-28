@@ -5,6 +5,9 @@ const createRoom = update => {
   return newRoom.save();
 };
 
+const findAllRooms = () => Room.find({});
+
 module.exports = {
-  createRoom
+  createRoom,
+  findAllRooms
 };

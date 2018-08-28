@@ -5,4 +5,6 @@ const createRoom = ({ name, description, creator }) => {
   return roomsDB.createRoom(filteredUpdate);
 };
 
-module.exports = { createRoom };
+const findAllRooms = () => roomsDB.findAllRooms();
+
+module.exports = { createRoom, findAllRooms };

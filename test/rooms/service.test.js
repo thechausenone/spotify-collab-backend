@@ -55,3 +55,18 @@ describe('createRoom', () => {
     expect(actual).toEqual(expectedResult);
   });
 });
+
+describe('findAllRooms', () => {
+  test('returns all available rooms', async () => {
+    // Arrange
+    const expectedResult = [validRoom];
+
+    mockRoomsDB.findAllRooms = jest.fn(() => [validRoom]);
+
+    // Act
+    const actual = await sut.findAllRooms();
+
+    // Assert
+    expect(actual).toEqual(expectedResult);
+  });
+});
