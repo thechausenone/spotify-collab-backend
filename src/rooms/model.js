@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { UserSchema } = require('../users/model');
 
 const { Schema } = mongoose;
 
@@ -9,7 +10,7 @@ const RoomSchema = new Schema(
     },
     description: { type: String },
     users: {
-      type: [String]
+      type: [UserSchema]
     },
     creator: {
       type: String
