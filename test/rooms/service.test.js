@@ -1,16 +1,9 @@
-const sinon = require('sinon');
 const sut = require('../../src/rooms/service');
 const mockRoomsDB = require('../../src/rooms/db');
 
-const sandbox = sinon.sandbox.create();
+beforeEach(() => {});
 
-beforeEach(() => {
-  sandbox.stub(mockRoomsDB);
-});
-
-afterEach(() => {
-  sandbox.restore();
-});
+afterEach(() => {});
 
 const validRoom = {
   _id: 'abc123',
