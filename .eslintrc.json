@@ -7,7 +7,9 @@
   ],
   "plugins": ["prettier", "import", "jest"],
   "rules": {
-    "prettier/prettier": ["error", { "singleQuote": true }],
+    "prettier/prettier": ["error", {
+      "singleQuote": true
+    }],
     "linebreak-style": ["error", "windows"],
     "quotes": ["error", "single"]
   },
