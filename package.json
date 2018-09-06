@@ -8,6 +8,7 @@
     "start:watch": "nodemon index.js",
     "test": "jest test",
     "test:watch": "npm run test -- --watch",
+    "debug": "nodemon --inspect=2299 index.js",
     "lint": "eslint --print-config .eslintrc.json | eslint-config-prettier-check"
   },
   "repository": {
