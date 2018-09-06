@@ -14,15 +14,13 @@ passport.use(
     },
     async (accessToken, refreshToken, profile, done) => {
       // Create user if not in db
-      let user = await UsersService.findUser(profile.id);
+      let user = await UsersService.findUserBySpotifyId(profile.id);
 
       if (!user) {
         user = UsersService.createUser({
           name: profile.displayName,
           spotifyId: profile.id,
-          accessToken,
-          profilePicture: profile.photos[0],
-          refreshToken
+          profilePicture: profile.photos[0]
         });
       }
 

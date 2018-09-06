@@ -11,15 +11,7 @@ const UserSchema = new Schema({
     type: String,
     required: true
   },
-  accessToken: {
-    type: String,
-    required: true
-  },
   profilePicture: {
-    type: String,
-    required: true
-  },
-  refreshToken: {
     type: String,
     required: true
   }

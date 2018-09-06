@@ -1,24 +1,16 @@
 const usersDB = require('./db');
 
-const createUser = ({
-  name,
-  spotifyId,
-  accessToken,
-  profilePicture,
-  refreshToken
-}) => {
+const createUser = ({ name, spotifyId, profilePicture }) => {
   const filteredUpdate = {
     name,
     spotifyId,
-    accessToken,
-    profilePicture,
-    refreshToken
+    profilePicture
   };
   return usersDB.createUser(filteredUpdate);
 };
 
-const findUser = spotifyId => usersDB.findUser(spotifyId);
+const findUserBySpotifyId = spotifyId => usersDB.findUserBySpotifyId(spotifyId);
 
 const findUserById = id => usersDB.findUserById(id);
 
-module.exports = { createUser, findUser, findUserById };
+module.exports = { createUser, findUserBySpotifyId, findUserById };

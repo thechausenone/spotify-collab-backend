@@ -5,7 +5,7 @@ const createUser = async update => {
   return newUser.save();
 };
 
-const findUser = async spotifyId => {
+const findUserBySpotifyId = async spotifyId => {
   const user = await UserModel.findOne({ spotifyId });
   return user;
 };
@@ -17,6 +17,6 @@ const findUserById = async id => {
 
 module.exports = {
   createUser,
-  findUser,
+  findUserBySpotifyId,
   findUserById
 };
