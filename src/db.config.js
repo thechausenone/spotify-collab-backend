@@ -6,5 +6,5 @@ mongoose.connect(
   DB_URL,
   { useNewUrlParser: true },
   // eslint-disable-next-line
-  () => console.log("Successfully connected to database.")
+  () => console.log('Successfully connected to database.')
 );
