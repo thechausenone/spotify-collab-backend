@@ -20,7 +20,7 @@ passport.use(
         user = UsersService.createUser({
           name: profile.displayName,
           spotifyId: profile.id,
-          profilePicture: profile.photos[0]
+          profilePicture: profile.photos[0] || ''
         });
       }
 

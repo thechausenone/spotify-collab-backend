@@ -14,7 +14,7 @@ mountRoutes(app);
 
 app.get('/', (req, res) => {
   if (req.user) {
-    res.send(`Hello ${req.user.name}! 'Go to /auth/logout to logout!`);
+    res.send(`Hello ${req.user.name}! Go to /auth/logout to logout!`);
   } else {
     res.send('Go to /auth/spotify to Login!');
   }

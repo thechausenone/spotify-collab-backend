@@ -13,7 +13,7 @@ const UserSchema = new Schema({
   },
   profilePicture: {
     type: String,
-    required: true
+    required: false
   }
 });
 
