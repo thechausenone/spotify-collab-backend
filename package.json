@@ -30,7 +30,8 @@
     "jest": "^23.5.0",
     "mongoose": "^5.2.7",
     "passport": "^0.4.0",
-    "passport-spotify": "^1.0.1"
+    "passport-spotify": "^1.0.1",
+    "merge": ">=1.2.1"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
